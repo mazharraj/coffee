@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe</title>
+
+    <!-- Tailwind CSS -->
+    <script src="tailwindCSS.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font-family : Poppins -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Montserrat:wght@300;500&family=Open+Sans:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Alpine Plugins -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine Core -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        body{
+        font-family: 'Poppins', sans-serif;
+}
+    </style>
+</head>
+<body>
+    <!-------------======================
+    ==----------- Header ---------======>
+
+    <!-------===== Section --- 001 =====------->
+    <section class="bg-[url(./images/header-bg.jpg)] bg-center bg-cover h-screen">
+        <!-------=====  =====------->
+        <div class="max-w-[1110px] xl:px-0 lg:px-16 md:px-12 px-10  mx-auto pt-4">
+            <!-------=====  =====------->
+            <div class="hidden md:block text-white">
+                <!-------=====  =====------->
+                <div class="text-right flex gap-7 text-white text-sm justify-end">
+                    <!-------=====  =====------->
+                    <p>Mon-Fri: 8am to 2pm</p>
+                    <p>Sat-Sun: 11am to 4pm</p>
+                    <p>(012) 6985 236 7512</p>
+                </div>
+            </div>
+            <!-------=====  =====------->
+            <div class="flex items-center justify-between relative">
+                <!-------===== Logo =====------->
+                <div><img src="images/logo.png" alt=""></div>
+                <!-------===== Menu =====------->
+                <div class="hidden md:block">
+                    <div class="flex justify-between gap-7 text-white text-sm">
+                        <!-----========----->
+                        <a href="#">HOME</a>
+                        <!-----========----->
+                        <a href="#">ABOUT</a>
+                        <!-----========----->
+                        <a href="#">COFFEE</a>
+                        <!-----========----->
+                        <a href="#">REVIEW</a>
+                        <!-----========----->
+                        <a href="#">BLOG</a>
+                        <!-----========----->
+                        <a href="#">PAGES</a>
+                    </div>
+                </div>
+
+                <!-------===== Mobile menu =====------->
+                <div x-data="{ expanded: false }" class="absolute w-full flex justify-end">
+                    <!-------===== Button =====------->
+                    <svg @click="expanded = ! expanded" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  stroke="currentColor" class="w-8 h-8 md:hidden block text-white hover:text-orange-300 cursor-pointer duration-300">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+    
+                    <!-------===== Menu =====------->
+                    <div x-show="expanded" x-collapse class="justify-between text-white text-2xl fixed left-0 right-0 top-14 flex flex-col text-center bg-black rounded gap-4 py-6 w-full">
+                        <!-----========----->
+                        <a href="#" class="hover:text-orange-300 duration-300 px-20 py-2">HOME</a>
+                        <!-----========----->
+                        <a href="#" class="hover:text-orange-300 duration-300 px-20 py-2">ABOUT</a>
+                        <!-----========----->
+                        <a href="#" class="hover:text-orange-300 duration-300 px-20 py-2">COFFEE</a>
+                        <!-----========----->
+                        <a href="#" class="hover:text-orange-300 duration-300 px-20 py-2">REVIEW</a>
+                        <!-----========----->
+                        <a href="#" class="hover:text-orange-300 duration-300 px-20 py-2">BLOG</a>
+                        <!-----========----->
+                        <a href="#" class="hover:text-orange-300 duration-300 px-20 py-2">PAGES</a>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-------===== Hero Content =====------->
+            <div class="pt-8">
+                <p class="text-white font-bold pt-12 pb-6 text-sm">NOW YOU CAN FEEL THE ENERGY</p>
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl xl:text-6xl font-semibold text-white pb-8 xl:leading-[70px]">Start your day with <br>
+                a black Coffee</h1>
+                <a href="#" class="bg-white rounded-full hover:bg-transparent border duration-300 border-white hover:text-white px-10 py-2">BUY NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <!--------==== Section --- 002 ====------->
+    <section class="max-w-[1110px] xl:px-0 lg:px-16 md:px-12 px-10 lg:pt-10 md:pt-6 pt-4 lg:pb-24 md:pb-16 pb-8 mx-auto">
+        <div class="flex items-center lg:flex-row flex-col justify-between gap-6 sm:gap-10 lg:gap-24">
+            <!----------=====  =====--------->
+            <div class="lg:w-max">
+                <img src="images/telecast.jpg" alt="" class="rounded-xl w-full">
+            </div>
+            <!----------=====  =====--------->
+            <div class="lg:w-2/5">
+                <p class="text-[#b68834] text-sm">LIVE COFFEE MAKING PROCESS</p>
+                <p class="pb-5 text-4xl font-semibold">We Telecast our <br> Coffee Making Live</p>
+                <p class="pb-5 text-sm font-normal">We are here to listen from you deliver exellence</p>
+                <p class="pb-4 text-sm text-gray-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                <img src="images/signature.png.webp" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!--------==== Section --- 003 ====------->
+    <section class="bg-[url(./images/menu-bg.jpg)] bg-center lg:py-[120px] md:py-16 py-8">
+        <div class="max-w-[1110px] xl:px-0 lg:px-16 md:px-12 px-10 mx-auto">
+            <p class="text-4xl font-semibold md:pb-4 pb-2 text-center">What kind of coffee we serve for you</p>
+        <p class="text-sm font-light text-gray-400 text-center pb-6 sm:pb-10 lg:pb-[76px]">Who are in extremely love with eco friendly system.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!----------===== grid-01 =====-------->
+            <div class="bg-white rounded-lg shadow-xl p-7">
+                <div class="flex justify-between">
+                    <p class="font-semibold text-xl">Cappuccino</p>
+                    <p class="font-bold text-[#b68834] text-xl pb-">$49</p>
+                </div>
+                <p class="text-sm font-light text-gray-400 py-4">Usage of the Internet is becoming more common due to rapid advance.</p>
+            </div>
+            <!----------===== grid-02 =====-------->
+            <div class="bg-white rounded-lg shadow-xl p-7">
+                <div class="flex justify-between">
+                    <p class="font-semibold text-xl">Americano</p>
+                    <p class="font-bold text-[#b68834] text-xl pb-">$49</p>
+                </div>
+                <p class="text-sm font-light text-gray-400 py-4">Usage of the Internet is becoming more common due to rapid advance.</p>
+            </div>
+            <!----------===== grid-03 =====-------->
+            <div class="bg-white rounded-lg shadow-xl p-7">
+                <div class="flex justify-between">
+                    <p class="font-semibold text-xl">Espresso</p>
+                    <p class="font-bold text-[#b68834] text-xl pb-">$49</p>
+                </div>
+                <p class="text-sm font-light text-gray-400 py-4">Usage of the Internet is becoming more common due to rapid advance.</p>
+            </div>
+            <!----------===== grid-04 =====-------->
+            <div class="bg-white rounded-lg shadow-xl p-7">
+                <div class="flex justify-between">
+                    <p class="font-semibold text-xl">Macchiato</p>
+                    <p class="font-bold text-[#b68834] text-xl pb-">$49</p>
+                </div>
+                <p class="text-sm font-light text-gray-400 py-4">Usage of the Internet is becoming more common due to rapid advance.</p>
+            </div>
+            <!----------===== grid-05 =====-------->
+            <div class="bg-white rounded-lg shadow-xl p-7">
+                <div class="flex justify-between">
+                    <p class="font-semibold text-xl">Mocha</p>
+                    <p class="font-bold text-[#b68834] text-xl pb-">$49</p>
+                </div>
+                <p class="text-sm font-light text-gray-400 py-4">Usage of the Internet is becoming more common due to rapid advance.</p>
+            </div>
+            <!----------===== grid-06 =====-------->
+            <div class="bg-white rounded-lg shadow-xl p-7">
+                <div class="flex justify-between">
+                    <p class="font-semibold text-xl">Coffe Latte</p>
+                    <p class="font-bold text-[#b68834] text-xl pb-">$49</p>
+                </div>
+                <p class="text-sm font-light text-gray-400 py-4">Usage of the Internet is becoming more common due to rapid advance.</p>
+            </div>
+            <!----------===== grid-07 =====-------->
+            <div class="bg-white rounded-lg shadow-xl p-7">
+                <div class="flex justify-between">
+                    <p class="font-semibold text-xl">Piccolo Latte</p>
+                    <p class="font-bold text-[#b68834] text-xl pb-">$49</p>
+                </div>
+                <p class="text-sm font-light text-gray-400 py-4">Usage of the Internet is becoming more common due to rapid advance.</p>
+            </div>
+            <!----------===== grid-08 =====-------->
+            <div class="bg-white rounded-lg shadow-xl p-7">
+                <div class="flex justify-between">
+                    <p class="font-semibold text-xl">Ristretto</p>
+                    <p class="font-bold text-[#b68834] text-xl pb-">$49</p>
+                </div>
+                <p class="text-sm font-light text-gray-400 py-4">Usage of the Internet is becoming more common due to rapid advance.</p>
+            </div>
+            <!----------===== grid-09 =====-------->
+            <div class="bg-white rounded-lg shadow-xl p-7">
+                <div class="flex justify-between">
+                    <p class="font-semibold text-xl">Affogato</p>
+                    <p class="font-bold text-[#b68834] text-xl pb-">$49</p>
+                </div>
+                <p class="text-sm font-light text-gray-400 py-4">Usage of the Internet is becoming more common due to rapid advance.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!--------==== Section --- 004 ====------->
+    <section class="max-w-[1110px] xl:px-0 lg:px-16 md:px-12 px-10 lg:pt-10 md:pt-6 pt-4 lg:pb-24 md:pb-16 pb-8 mx-auto">
+            <p class="text-4xl font-semibold pb-4 text-center">What kind of coffee we serve for you</p>
+            <p class="text-sm font-light text-gray-400 text-center pb-6 sm:pb-10 lg:pb-[76px]">Who are in extremely love with eco friendly system.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3">
+                <div class="col-span-1">
+                    <a href="images/g1.jpg"><img src="images/g1.jpg" alt="" class="pb-8 px-4 w-full"></a>
+                    <a href="images/g2.jpg"><img src="images/g2.jpg" alt="" class="pb-8 px-4 w-full"></a>
+                </div>
+                <div class="col-span-2">
+                    <a href="images/g3.jpg"><img src="images/g3.jpg" alt="" class="pb-8 px-4 w-full"></a>
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <a href="images/g4.jpg.webp"><img src="images/g4.jpg.webp" alt="" class="pb-8 px-4 w-full"></a>
+                        <a href="images/g5.jpg.webp"><img src="images/g5.jpg.webp" alt="" class="pb-8 px-4 w-full"></a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!--------==== Section --- 005 ====------->
+    <section>
+        <div class="max-w-[1110px] xl:px-0 lg:px-16 md:px-12 px-10 pb-28 mx-auto">
+            <p class="text-4xl font-semibold pb-4 text-center">FAQ</p>
+            <p class="text-sm font-light text-gray-400 text-center pb-6 sm:pb-10 lg:pb-[76px]">Who are in extremely love with eco friendly system.</p>
+            <div class="space-y-3">
+                <!--------===== FAQ 01 =====-------->
+            <div class="py-2 px-3 bg-blue-900 shadow-md rounded" x-data="{ expanded: true }">
+
+                <div class="flex items-center justify-between cursor-pointer" @click="expanded = ! expanded">
+                    <p class="text-xl font-semibold text-white">Our Destination</p>
+                    <p class="text-xl font-semibold text-white">+</p>
+                </div>
+
+                <div x-show="expanded" x-collapse>
+                    <div class="h-[1px] w-full bg-gray-600 my-2"></div>
+                    <div><p class="text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perspiciatis soluta, eligendi ducimus neque tenetur, quos nesciunt accusantium quisquam obcaecati ab hic non facilis aperiam?</p></div>
+                </div>
+            </div>
+
+            <!--------===== FAQ 02 =====-------->
+            <div class="py-2 px-3 bg-blue-900 shadow-md rounded" x-data="{ expanded: false }">
+
+                <div class="flex items-center justify-between cursor-pointer" @click="expanded = ! expanded">
+                    <p class="text-xl font-semibold text-white">About Us</p>
+                    <p class="text-xl font-semibold text-white">+</p>
+                </div>
+
+                <div x-show="expanded" x-collapse>
+                    <div class="h-[1px] w-full bg-gray-600 my-2"></div>
+                    <div><p class="text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perspiciatis soluta, eligendi ducimus neque tenetur, quos nesciunt accusantium quisquam obcaecati ab hic non facilis aperiam?</p></div>
+                </div>
+            </div>
+
+            <!--------===== FAQ 03 =====-------->
+            <div class="py-2 px-3 bg-blue-900 shadow-md rounded" x-data="{ expanded: false }">
+
+                <div class="flex items-center justify-between cursor-pointer" @click="expanded = ! expanded">
+                    <p class="text-xl font-semibold text-white">Our Working Progress</p>
+                    <p class="text-xl font-semibold text-white">+</p>
+                </div>
+
+                <div x-show="expanded" x-collapse>
+                    <div class="h-[1px] w-full bg-gray-600 my-2"></div>
+                    <div><p class="text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perspiciatis soluta, eligendi ducimus neque tenetur, quos nesciunt accusantium quisquam obcaecati ab hic non facilis aperiam?</p></div>
+                </div>
+            </div>
+            </div>
+            
+       </div> 
+    </section>
+
+
+    <!--------==== Footer ====------->
+    <footer>
+     <section class="bg-[url(./images/footer-bg.jpg)] bg-center bg-cover">
+        <div class="max-w-[1110px] xl:px-0 lg:px-16 md:px-12 px-10 pb-6 mx-auto">
+            <p class="text-white text-center pt-36 pb-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat quia provident sunt et laborum iste beatae quasi ratione, tenetur voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste atque quasi vero at, inventore repellat.</p>
+            <div class="grid lg:grid-cols-4 grid-cols-2 gap-x-4 gap-y-8 items-start justify-between text-white pb-24">
+            
+                    <ul>
+                        <li class="py-3"><a href="#" class="font-bold">HOME</a></li>
+                        <li class="py-3"><a href="#">ABOUT</a></li>
+                        <li class="py-3"><a href="#">SERVICES</a></li>
+                        <li class="py-3"><a href="#">CONTACT US</a></li>
+                    </ul>
+                
+    
+                
+                    <ul>
+                        <li class="py-3"><a href="#" class="font-bold">DESTINATION</a></li>
+                        <li class="py-3"><a href="#">ABOUT</a></li>
+                        <li class="py-3"><a href="#">SERVICES</a></li>
+                        <li class="py-3"><a href="#">CONTACT US</a></li>
+                    </ul>
+      
+    
+            
+                    <ul>
+                        <li class="py-3"><a href="#" class="font-bold">PROGRESS</a></li>
+                        <li class="py-3"><a href="#">ABOUT</a></li>
+                        <li class="py-3"><a href="#">SERVICES</a></li>
+                        <li class="py-3"><a href="#">CONTACT US</a></li>
+                    </ul>
+
+                
+                        <div class="flex flex-col items-start">
+                            <label for="email">Your Email Address:</label>
+                            <input type="email" class="my-2 text-black px-3 py-1 w-full rounded h-10" placeholder="Ex: abc@123.com">
+                            <button class="bg-blue-700 px-4 py-2 rounded hover:bg-blue-900">Submit</button>
+                        </div>
+                    
+                    
+            </div>
+            <p class="text-gray-400 text-center pb-2">Developed By <a href="#" class="font-bold">Mazharul Islam</a></p>
+        </div>
+
+    </section>
+    </footer>
+</body>
+</html>
